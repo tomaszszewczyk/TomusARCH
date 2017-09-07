@@ -1,6 +1,7 @@
 package pl.tomaszszewczyk;
 
-public class ProgramMemory
+interface ProgramMemory
 {
-	
+    Instruction get_instruction(int address);
+    byte get_byte(int address);
 }

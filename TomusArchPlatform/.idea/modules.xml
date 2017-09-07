@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/TomusArchGUI/TomusArchGUI.iml" filepath="$PROJECT_DIR$/TomusArchGUI/TomusArchGUI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TomusArchPlatform.iml" filepath="$PROJECT_DIR$/TomusArchPlatform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TomusAssembler/TomusAssembler.iml" filepath="$PROJECT_DIR$/TomusAssembler/TomusAssembler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TomusBrainfuckCompiler/TomusBrainfuckCompiler.iml" filepath="$PROJECT_DIR$/TomusBrainfuckCompiler/TomusBrainfuckCompiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TomusVirtualMachine/TomusVirtualMachine.iml" filepath="$PROJECT_DIR$/TomusVirtualMachine/TomusVirtualMachine.iml" />
+    </modules>
+  </component>
+</project>

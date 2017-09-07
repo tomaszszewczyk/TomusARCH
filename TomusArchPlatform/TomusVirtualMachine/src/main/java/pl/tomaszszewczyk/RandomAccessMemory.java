@@ -1,6 +1,7 @@
 package pl.tomaszszewczyk;
 
-public class RandomAccessMemory
+interface RandomAccessMemory
 {
-	
+    byte get_byte(int address);
+    void write_byte(int address, int value);
 }

@@ -9,10 +9,14 @@ public class Machine
 	private RandomAccessMemory ram;
 	private ProgramMemory	   program_memory;
 	private ProccesingUnit	   cpu;
-	private TextConsole		   console;
 
-    public static void main( String[] args )
+	public Machine(String source_file_name)
     {
-        System.out.println( "Hello World!" );
+
+    }
+
+    public void execute()
+    {
+
     }
 }

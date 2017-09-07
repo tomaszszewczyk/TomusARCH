@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="TomusArchGUI" />
+        <module name="TomusAssembler" />
+        <module name="TomusBrainfuckCompiler" />
+        <module name="TomusVirtualMachine" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TomusArchGUI" target="1.5" />
+      <module name="TomusArchPlatform" target="1.5" />
+      <module name="TomusAssembler" target="1.5" />
+      <module name="TomusBrainfuckCompiler" target="1.5" />
+      <module name="TomusVirtualMachine" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
