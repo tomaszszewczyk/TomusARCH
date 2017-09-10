@@ -1,8 +1,13 @@
+pl\tomaszszewczyk\instructions\InstructionSTB.class
+pl\tomaszszewczyk\instructions\InstructionLDB.class
+pl\tomaszszewczyk\instructions\Instruction.class
+pl\tomaszszewczyk\CPU$Register.class
+pl\tomaszszewczyk\RAM.class
+pl\tomaszszewczyk\instructions\InstructionLD.class
+pl\tomaszszewczyk\instructions\InstructionMOV.class
 pl\tomaszszewczyk\Register.class
 pl\tomaszszewczyk\App.class
 pl\tomaszszewczyk\Machine.class
-pl\tomaszszewczyk\instructions\Instruction.class
-pl\tomaszszewczyk\CPU$Register.class
+pl\tomaszszewczyk\instructions\InstructionST.class
 pl\tomaszszewczyk\CPU.class
 pl\tomaszszewczyk\instructions\InstructionSET.class
-pl\tomaszszewczyk\instructions\InstructionMOV.class

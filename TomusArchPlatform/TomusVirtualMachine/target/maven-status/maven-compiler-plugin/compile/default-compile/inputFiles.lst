@@ -1,6 +1,12 @@
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionLD.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionST.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\CPU.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\Machine.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionSET.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\App.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionLDB.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionMOV.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionSTB.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\RAM.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\Instruction.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\Register.java

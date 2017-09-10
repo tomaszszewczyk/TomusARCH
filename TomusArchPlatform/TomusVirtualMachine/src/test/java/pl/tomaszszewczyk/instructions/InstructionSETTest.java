@@ -20,6 +20,10 @@ public class InstructionSETTest extends TestCase {
         instruction = new InstructionSET();
     }
 
+    public void testSetup() {
+        assertEquals(instruction.getOpcode(), 0x01);
+    }
+
     public void testExecute() {
         Mockito.when(cpu.getRegister(Register.R0)).thenReturn(123);
         instruction.setDestination(Register.R1);

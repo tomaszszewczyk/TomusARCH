@@ -20,6 +20,10 @@ public class InstructionMOVTest extends TestCase {
         instruction = new InstructionMOV();
     }
 
+    public void testSetup() {
+        assertEquals(instruction.getOpcode(), 0x00);
+    }
+
     public void testExecute() {
         Mockito.when(cpu.getRegister(Register.R0)).thenReturn(123);
         instruction.setSource(Register.R0);

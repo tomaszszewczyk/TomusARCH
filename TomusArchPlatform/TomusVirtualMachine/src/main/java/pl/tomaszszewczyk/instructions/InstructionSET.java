@@ -5,11 +5,14 @@ import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
 
 public class InstructionSET extends Instruction {
-    private byte opcode = 0x01;
     private Register dst;
     private int value;
 
     public InstructionSET() {
+    }
+
+    public byte getOpcode() {
+        return 0x01;
     }
 
     public void setDestination(Register adst) {
