@@ -4,25 +4,24 @@ import pl.tomaszszewczyk.CPU;
 import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
 
-public class InstructionMOV extends Instruction {
-    private byte opcode = 0x00;
-    private Register src;
+public class InstructionSET extends Instruction {
+    private byte opcode = 0x01;
     private Register dst;
+    private int value;
 
-    public InstructionMOV() {
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
+    public InstructionSET() {
     }
 
     public void setDestination(Register adst) {
         dst = adst;
     }
 
+    public void setValue(int avalue) {
+        value = avalue;
+    }
+
     public void execute(Machine parent) {
         CPU cpu = parent.getCPU();
-        int src_val = cpu.getRegister(src);
-        cpu.setRegister(dst, src_val);
+        cpu.setRegister(dst, value);
     }
 }

@@ -1,11 +1,6 @@
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\StackPointerRegister.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\ProgramMemory.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\ControlRegisters.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\FlagRegister.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\CPU.java
 C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\Machine.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\Register.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\GeneralPurposeRegister.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\ProccesingUnit.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\registers\ProgramCounterRegister.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\RandomAccessMemory.java
-C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\TextConsole.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\App.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\InstructionMOV.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\instructions\Instruction.java
+C:\Users\tomek\code\TomusARCH\TomusArchPlatform\TomusVirtualMachine\src\main\java\pl\tomaszszewczyk\Register.java

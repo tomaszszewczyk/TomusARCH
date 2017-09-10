@@ -2,21 +2,20 @@ package pl.tomaszszewczyk;
 
 /**
  * Machine class
- *
  */
-public class Machine 
-{
-	private RandomAccessMemory ram;
-	private ProgramMemory	   program_memory;
-	private ProccesingUnit	   cpu;
+public class Machine {
 
-	public Machine(String source_file_name)
-    {
+    private CPU cpu;
 
+    public Machine(String source_file_name) {
+        cpu = new CPU();
     }
 
-    public void execute()
-    {
+    public CPU getCPU() {
+        return cpu;
+    }
+
+    public void execute() {
 
     }
 }
