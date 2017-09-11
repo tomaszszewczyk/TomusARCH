@@ -13,7 +13,7 @@ public class InstructionLDB extends Instruction {
     }
 
     public byte getOpcode() {
-        return 0x03;
+        return 0x04;
     }
 
     public void setSource(Register asrc) {

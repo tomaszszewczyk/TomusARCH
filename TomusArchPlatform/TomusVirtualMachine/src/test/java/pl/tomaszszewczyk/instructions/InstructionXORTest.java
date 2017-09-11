@@ -8,8 +8,8 @@ import pl.tomaszszewczyk.RAM;
 
 import static org.mockito.Mockito.mock;
 
-public class InstructionLDBTest extends TestCase {
-    private InstructionLDB instruction;
+public class InstructionXORTest extends TestCase {
+    private InstructionXOR instruction;
     private Machine machine;
     private CPU cpu;
     private RAM ram;
@@ -20,22 +20,22 @@ public class InstructionLDBTest extends TestCase {
         ram = mock(RAM.class);
         Mockito.when(machine.getCPU()).thenReturn(cpu);
         Mockito.when(machine.getRAM()).thenReturn(ram);
-        instruction = new InstructionLDB();
+        instruction = new InstructionXOR();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x04);
+        assertEquals(instruction.getOpcode(), 0x17);
     }
 
     public void testExecute() {
-        Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xAA);
-        Mockito.when(ram.getByte(0xAA)).thenReturn((byte)0xBB);
+        Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xF00F);
+        Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(0xFFFF);
         instruction.setSource(CPU.Register.R0);
         instruction.setDestination(CPU.Register.R1);
 
         instruction.execute(machine);
 
         Mockito.verify(cpu, Mockito.times(1))
-                .setRegister(CPU.Register.R1,(byte)0xBB);
+                .setRegister(CPU.Register.R1, 0x0FF0);
     }
 }

@@ -3,17 +3,16 @@ package pl.tomaszszewczyk.instructions;
 import pl.tomaszszewczyk.CPU;
 import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
-import pl.tomaszszewczyk.RAM;
 
-public class InstructionLD extends Instruction {
+public class InstructionMUL extends Instruction {
     private Register src;
     private Register dst;
 
-    public InstructionLD() {
+    public InstructionMUL() {
     }
 
     public byte getOpcode() {
-        return 0x02;
+        return 0x12;
     }
 
     public void setSource(Register asrc) {
@@ -26,10 +25,12 @@ public class InstructionLD extends Instruction {
 
     public void execute(Machine parent) {
         CPU cpu = parent.getCPU();
-        RAM ram = parent.getRAM();
 
-        int source_address = cpu.getRegister(src);
-        int data = ram.getWord(source_address);
-        cpu.setRegister(dst, data);
+        int dst_value = cpu.getRegister(dst);
+        int src_value = cpu.getRegister(src);
+
+        int result = dst_value * src_value;
+
+        cpu.setRegister(dst, result);
     }
 }

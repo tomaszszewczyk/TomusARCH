@@ -24,7 +24,7 @@ public class InstructionLDTest extends TestCase {
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x03);
+        assertEquals(instruction.getOpcode(), 0x02);
     }
 
     public void testExecute() {
