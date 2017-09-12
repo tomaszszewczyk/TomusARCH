@@ -14,15 +14,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf>
+            <file leaf-file-name="CPU.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/CPU.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="615">
+                    <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.500612">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="InstructionADD.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionADD.java">
+          <file leaf-file-name="InstructionJA.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJA.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+                <state relative-caret-position="435">
+                  <caret line="33" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -30,12 +50,30 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InstructionNOT.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionNOT.java">
+          <file leaf-file-name="InstructionPUSH.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPUSH.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="300">
-                  <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-                  <folding />
+                  <caret line="22" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#396#397#0" expanded="true" />
+                    <element signature="e#428#429#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="InstructionPOP.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPOP.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#409#410#0" expanded="true" />
+                    <element signature="e#451#452#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -44,39 +82,38 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="InstructionXORTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionXORTest.java">
+          <file leaf-file-name="InstructionJBETest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJBETest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="390">
-                  <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
+                <state relative-caret-position="375">
+                  <caret line="36" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="1" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#719#720#0" expanded="true" />
-                    <element signature="e#778#779#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InstructionNOTTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionNOTTest.java">
+          <file leaf-file-name="InstructionPUSHTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPUSHTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="360">
-                  <caret line="30" column="68" lean-forward="false" selection-start-line="30" selection-start-column="68" selection-end-line="30" selection-end-column="76" />
+                  <caret line="24" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
                   <folding>
-                    <element signature="e#719#720#0" expanded="true" />
-                    <element signature="e#778#779#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InstructionORTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionORTest.java">
+          <file leaf-file-name="InstructionPOPTest.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPOPTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="285">
-                  <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-                  <folding />
+                <state relative-caret-position="555">
+                  <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -102,31 +139,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/RandomAccessMemory.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/ProgramMemory.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/ProccesingUnit.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Instruction.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Ports.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionMoc_test.java" />
-        <option value="$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1.jar!/junit/framework/TestCase.class" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Register.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/App.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/CPU.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionSETTest.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/Instruction.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionMOVTest.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Machine.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/pom.xml" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionSTTest.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionST.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSET.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionMOV.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/RAM.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSTB.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionSTBTest.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionADD.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSUB.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionSUBTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionMUL.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionMULTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionXOR.java" />
@@ -151,6 +163,33 @@
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionORTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionNOTTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionNOT.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionCMPTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionCMP.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/CPU.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJE.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNE.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJB.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJAE.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/instructionJVA.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJVA.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJVATest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJZ.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNZ.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJC.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNC.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJBE.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionVA.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJA.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJZTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJNZTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJCTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJNCTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJATest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJBETest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPUSH.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPUSHTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPOP.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPOPTest.java" />
       </list>
     </option>
   </component>
@@ -409,7 +448,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27331000" />
+    <option name="totallyTimeSpent" value="37116000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-7" width="1936" height="1066" extended-state="6" />
@@ -503,156 +542,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Instruction.java" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/plan.uml" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/a.uml" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Ports.java" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/ProgramMemory.java" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/RandomAccessMemory.java" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/ProccesingUnitTest.java" />
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionMoc_test.java" />
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/3.8.1/junit-3.8.1.jar!/junit/framework/TestCase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-390">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="46" lean-forward="false" selection-start-line="3" selection-start-column="46" selection-end-line="3" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/CPU.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#498#499#0" expanded="false" />
-            <element signature="e#539#540#0" expanded="false" />
-            <element signature="e#585#586#0" expanded="false" />
-            <element signature="e#629#630#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/Machine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding>
-            <element signature="e#311#312#0" expanded="false" />
-            <element signature="e#337#338#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSET.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="49" selection-end-line="6" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/Instruction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="5" lean-forward="false" selection-start-line="7" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/RAM.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionXOR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSUB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSTB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionST.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSHR.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionSHL.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionOR.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -742,9 +631,9 @@
         <state relative-caret-position="150">
           <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -778,9 +667,9 @@
         <state relative-caret-position="390">
           <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -842,8 +731,8 @@
         <state relative-caret-position="300">
           <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding>
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="false" />
+            <element signature="e#778#779#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -864,33 +753,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionXORTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#778#779#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionORTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionADD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -907,9 +774,257 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionNOT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="26" column="22" lean-forward="false" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="375">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionADD.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="33" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionCMPTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="43" column="67" lean-forward="false" selection-start-line="43" selection-start-column="67" selection-end-line="43" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionXORTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#778#779#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/CPU.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionCMP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJNC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJBE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJAE.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="50" lean-forward="false" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJZ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="29" column="9" lean-forward="false" selection-start-line="29" selection-start-column="9" selection-end-line="29" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJZTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="43" lean-forward="false" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJNZTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJNCTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="43" lean-forward="false" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJATest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="49" column="43" lean-forward="false" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionJA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionJBETest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="76" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPUSH.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#396#397#0" expanded="true" />
+            <element signature="e#428#429#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPUSHTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/instructions/InstructionPOP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="29" column="39" lean-forward="false" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/instructions/InstructionPOPTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="39" column="44" lean-forward="true" selection-start-line="39" selection-start-column="44" selection-end-line="39" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
