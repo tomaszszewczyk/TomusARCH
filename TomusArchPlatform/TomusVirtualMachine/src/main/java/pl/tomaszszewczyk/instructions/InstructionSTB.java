@@ -1,16 +1,13 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.RAM;
 
 public class InstructionSTB extends Instruction {
     private Register src;
     private Register dst;
-
-    public InstructionSTB() {
-    }
 
     public byte getOpcode() {
         return 0x04;

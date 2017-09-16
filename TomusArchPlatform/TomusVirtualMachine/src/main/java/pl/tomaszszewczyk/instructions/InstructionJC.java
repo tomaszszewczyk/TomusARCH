@@ -1,14 +1,11 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 
 public class InstructionJC extends Instruction {
     private int address;
-
-    public InstructionJC() {
-    }
 
     public byte getOpcode() {
         return 0x23;
@@ -24,7 +21,7 @@ public class InstructionJC extends Instruction {
         boolean flagCF = cpu.getFlagCF();
         int pc = cpu.getRegister(Register.PC) + 3;
 
-        if(flagCF) {
+        if (flagCF) {
             pc += address;
             cpu.setRegister(Register.PC, pc);
         }

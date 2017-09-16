@@ -1,15 +1,12 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 
 public class InstructionADD extends Instruction {
     private Register src;
     private Register dst;
-
-    public InstructionADD() {
-    }
 
     public byte getOpcode() {
         return 0x10;

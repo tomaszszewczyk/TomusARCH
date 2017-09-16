@@ -1,15 +1,12 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 
 public class InstructionCMP extends Instruction {
     private Register src;
     private Register dst;
-
-    public InstructionCMP() {
-    }
 
     public byte getOpcode() {
         return 0x20;
@@ -34,9 +31,9 @@ public class InstructionCMP extends Instruction {
         cpu.clearFlagZF();
         cpu.clearFlagCF();
 
-        if(result == 0)
+        if (result == 0)
             cpu.setFlagZF();
-        else if(result < 0)
+        else if (result < 0)
             cpu.setFlagCF();
     }
 }

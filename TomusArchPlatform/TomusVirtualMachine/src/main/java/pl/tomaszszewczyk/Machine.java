@@ -23,4 +23,8 @@ public class Machine {
     public RAM getRAM() {
         return ram;
     }
+
+    public void powerOFF() {
+
+    }
 }
