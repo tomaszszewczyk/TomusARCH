@@ -31,7 +31,7 @@ public class InstructionJATest extends TestCase {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(false);
-        instruction.setRelativeAddress(0xED);
+        instruction.setAddress(0xED);
 
         instruction.execute(machine);
 
@@ -43,7 +43,7 @@ public class InstructionJATest extends TestCase {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(true);
-        instruction.setRelativeAddress(0xED);
+        instruction.setAddress(0xED);
 
         instruction.execute(machine);
 

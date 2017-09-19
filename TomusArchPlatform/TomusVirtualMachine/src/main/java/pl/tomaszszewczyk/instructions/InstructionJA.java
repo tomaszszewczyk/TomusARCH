@@ -14,7 +14,7 @@ public class InstructionJA extends Instruction {
         return 0x26;
     }
 
-    public void setRelativeAddress(int aAddress) {
+    public void setAddress(int aAddress) {
         address = aAddress;
     }
 
