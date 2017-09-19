@@ -1,15 +1,12 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 
 public class InstructionSHL extends Instruction {
     private Register src;
     private Register dst;
-
-    public InstructionSHL() {
-    }
 
     public byte getOpcode() {
         return 0x19;

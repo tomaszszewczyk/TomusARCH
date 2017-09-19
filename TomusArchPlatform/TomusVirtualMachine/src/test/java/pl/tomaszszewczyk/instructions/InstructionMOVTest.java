@@ -1,22 +1,16 @@
 package pl.tomaszszewczyk.instructions;
 
-import junit.framework.TestCase;
 import org.mockito.Mockito;
-import pl.tomaszszewczyk.CPU;
 import pl.tomaszszewczyk.CPU.Register;
 import pl.tomaszszewczyk.Machine;
 
 import static org.mockito.Mockito.mock;
 
-public class InstructionMOVTest extends TestCase {
+public class InstructionMOVTest extends InstructionTest {
     private InstructionMOV instruction;
-    private Machine machine;
-    private CPU cpu;
 
     public void setUp() {
-        machine = mock(Machine.class);
-        cpu = mock(CPU.class);
-        Mockito.when(machine.getCPU()).thenReturn(cpu);
+        super.setUp();
         instruction = new InstructionMOV();
     }
 

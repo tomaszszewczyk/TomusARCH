@@ -1,8 +1,5 @@
 package pl.tomaszszewczyk;
 
-/**
- * Machine class
- */
 public class Machine {
 
     private CPU cpu;
@@ -16,11 +13,15 @@ public class Machine {
         return cpu;
     }
 
-    public void execute() {
-
-    }
-
     public RAM getRAM() {
         return ram;
+    }
+
+    public void execute() throws Exception {
+        throw new Exception("Not implemented");
+    }
+
+    public void powerOFF() {
+
     }
 }

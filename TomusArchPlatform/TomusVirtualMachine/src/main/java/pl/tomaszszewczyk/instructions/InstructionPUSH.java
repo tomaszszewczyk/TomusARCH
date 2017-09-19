@@ -1,15 +1,12 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.RAM;
 
 public class InstructionPUSH extends Instruction {
     private Register source;
-
-    public InstructionPUSH() {
-    }
 
     public byte getOpcode() {
         return 0x30;

@@ -1,15 +1,12 @@
 package pl.tomaszszewczyk.instructions;
 
 import pl.tomaszszewczyk.CPU;
-import pl.tomaszszewczyk.Machine;
 import pl.tomaszszewczyk.CPU.Register;
+import pl.tomaszszewczyk.Machine;
 
 public class InstructionXOR extends Instruction {
     private Register src;
     private Register dst;
-
-    public InstructionXOR() {
-    }
 
     public byte getOpcode() {
         return 0x17;
