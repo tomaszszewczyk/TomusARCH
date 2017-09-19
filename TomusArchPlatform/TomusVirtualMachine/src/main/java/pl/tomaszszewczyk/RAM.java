@@ -1,11 +1,11 @@
 package pl.tomaszszewczyk;
 
-public interface RAM {
-    int getWord(int address);
+public abstract class RAM {
+    public abstract int getWord(int address);
 
-    void writeWord(int address, int word);
+    public abstract void writeWord(int address, int word);
 
-    byte getByte(int source_address);
+    public abstract byte getByte(int source_address);
 
-    void writeByte(int dst_address, byte data);
+    public abstract void writeByte(int dst_address, byte data);
 }
