@@ -20,9 +20,13 @@ public class InstructionOUTB extends Instruction {
         this.destination = destination;
     }
 
-    public void execute(Machine parent) {
+    public void execute(Machine parent) throws InstructionExecutionException {
         CPU cpu = parent.getCPU();
         int value = cpu.getRegister(sourceRegister);
-        cpu.writePort(destination, value);
+        try {
+            cpu.writePort(destination, value);
+        } catch (CPU.WrongPortAddressException e) {
+            throw new InstructionExecutionException();
+        }
     }
 }

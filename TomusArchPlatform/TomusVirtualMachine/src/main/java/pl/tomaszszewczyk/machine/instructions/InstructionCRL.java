@@ -20,9 +20,13 @@ public class InstructionCRL extends Instruction {
         this.destination = destination;
     }
 
-    public void execute(Machine parent) {
+    public void execute(Machine parent) throws InstructionExecutionException {
         CPU cpu = parent.getCPU();
         int value = cpu.getRegister(sourceRegister);
-        cpu.setSpecialRegister(destination, value);
+        try {
+            cpu.setSpecialRegister(destination, value);
+        } catch (CPU.WrongRegisterAddressException e) {
+            throw new InstructionExecutionException();
+        }
     }
 }

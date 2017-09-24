@@ -20,9 +20,14 @@ public class InstructionCRS extends Instruction {
         source = aSource;
     }
 
-    public void execute(Machine parent) {
+    public void execute(Machine parent) throws InstructionExecutionException {
         CPU cpu = parent.getCPU();
-        int value = cpu.getSpecialRegister(source);
+        int value = 0;
+        try {
+            value = cpu.getSpecialRegister(source);
+        } catch (CPU.WrongRegisterAddressException e) {
+            throw new InstructionExecutionException();
+        }
         cpu.setRegister(destinationRegister, value);
     }
 }

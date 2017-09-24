@@ -20,9 +20,14 @@ public class InstructionINB extends Instruction {
         source = aSource;
     }
 
-    public void execute(Machine parent) {
+    public void execute(Machine parent) throws InstructionExecutionException {
         CPU cpu = parent.getCPU();
-        int value = cpu.readPort(source);
+        int value = 0;
+        try {
+            value = cpu.readPort(source);
+        } catch (CPU.WrongPortAddressException e) {
+            throw new InstructionExecutionException();
+        }
         cpu.setRegister(destinationRegister, value);
     }
 }

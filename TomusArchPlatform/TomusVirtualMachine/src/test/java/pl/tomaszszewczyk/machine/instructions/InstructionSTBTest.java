@@ -36,6 +36,6 @@ public class InstructionSTBTest extends TestCase {
         instruction.execute(machine);
 
         Mockito.verify(ram, Mockito.times(1))
-                .writeByte(0xCCDD, (byte)0xBB);
+                .writeByte(0xCCDD, (byte) 0xBB);
     }
 }

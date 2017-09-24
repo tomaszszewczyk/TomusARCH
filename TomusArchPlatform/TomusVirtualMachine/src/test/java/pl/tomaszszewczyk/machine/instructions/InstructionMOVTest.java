@@ -3,8 +3,6 @@ package pl.tomaszszewczyk.machine.instructions;
 import org.mockito.Mockito;
 import pl.tomaszszewczyk.machine.CPU.Register;
 
-import static org.mockito.Mockito.mock;
-
 public class InstructionMOVTest extends InstructionTest {
     private InstructionMOV instruction;
 
