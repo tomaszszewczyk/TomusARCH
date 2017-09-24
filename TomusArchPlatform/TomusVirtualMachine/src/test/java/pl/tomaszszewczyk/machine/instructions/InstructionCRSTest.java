@@ -15,7 +15,7 @@ public class InstructionCRSTest extends InstructionTest {
         assertEquals(instruction.getOpcode(), (byte) 0xF1);
     }
 
-    public void testExecute() {
+    public void testExecute() throws Exception {
         Mockito.when(cpu.getSpecialRegister(0x100)).thenReturn(0xBB);
         instruction.setSource(0x100);
         instruction.setDestination(CPU.Register.R1);
@@ -24,6 +24,5 @@ public class InstructionCRSTest extends InstructionTest {
 
         Mockito.verify(cpu, Mockito.times(1))
                 .setRegister(CPU.Register.R1, 0xBB);
-
     }
 }

@@ -20,5 +20,9 @@ public abstract class Instruction {
 
     public abstract byte getOpcode();
 
-    public abstract void execute(Machine parent);
+    public abstract void execute(Machine parent) throws InstructionExecutionException;
+
+    public static class InstructionExecutionException extends Exception {
+
+    }
 }

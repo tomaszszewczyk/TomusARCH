@@ -15,7 +15,7 @@ public class InstructionOUTBTest extends InstructionTest {
         assertEquals(instruction.getOpcode(), (byte) 0xF2);
     }
 
-    public void testExecute() {
+    public void testExecute() throws Exception {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xBB);
         instruction.setSource(CPU.Register.R0);
         instruction.setDestination(0x100);

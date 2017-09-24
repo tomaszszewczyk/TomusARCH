@@ -5,6 +5,7 @@ import pl.tomaszszewczyk.machine.CPU;
 
 public class InstructionADDTest extends InstructionTest {
     private InstructionADD instruction;
+
     public void setUp() {
         super.setUp();
         instruction = new InstructionADD();

@@ -5,8 +5,8 @@ public class Machine {
     private CPU cpu;
     private RAM ram;
 
-    public Machine(String source_file_name) {
-        cpu = new CPU();
+    public Machine() {
+        cpu = new CPU(this);
     }
 
     public CPU getCPU() {
@@ -23,5 +23,9 @@ public class Machine {
 
     public void powerOFF() {
 
+    }
+
+    public Console getConsole() {
+        return null;
     }
 }
