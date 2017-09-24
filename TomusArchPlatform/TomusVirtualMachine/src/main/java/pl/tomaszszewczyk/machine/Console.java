@@ -1,9 +1,9 @@
 package pl.tomaszszewczyk.machine;
 
 public class Console {
-    private ReadWritePort readWritePort;
-    private DataAvailablePort dataAvailablePort;
-    private ControlPort controlPort;
+    private ReadWritePort readWritePort = new ReadWritePort();
+    private DataAvailablePort dataAvailablePort = new DataAvailablePort();
+    private ControlPort controlPort = new ControlPort();
 
     class ReadWritePort implements Port {
 
@@ -43,10 +43,10 @@ public class Console {
     }
 
     public Port getDataAvailablePort() {
-        return null;
+        return dataAvailablePort;
     }
 
     public Port getControlPort() {
-        return null;
+        return controlPort;
     }
 }

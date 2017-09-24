@@ -67,6 +67,7 @@ public class CPU {
         }
         controlRegisters = new ControlRegisters();
 
+        ports = new HashMap<Integer, Port>();
         ports.put(0x20, parent.getConsole().getReadWritePort());
         ports.put(0x21, parent.getConsole().getDataAvailablePort());
         ports.put(0x22, parent.getConsole().getControlPort());

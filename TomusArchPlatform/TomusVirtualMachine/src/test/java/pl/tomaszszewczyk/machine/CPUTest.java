@@ -2,17 +2,30 @@ package pl.tomaszszewczyk.machine;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
 
 public class CPUTest {
     private Machine machine;
+    private Console console;
+    private Port port;
     private CPU cpu;
 
     @Before
     public void setUp() throws Exception {
         machine = mock(Machine.class);
+        console = mock(Console.class);
+        port = mock(Port.class);
+        Mockito.when(machine.getConsole()).thenReturn(console);
+
+        Mockito.when(console.getControlPort()).thenReturn(port);
+        Mockito.when(console.getDataAvailablePort()).thenReturn(port);
+        Mockito.when(console.getReadWritePort()).thenReturn(port);
+
+        Mockito.when(port.read()).thenReturn(0x1234);
+
         cpu = new CPU(machine);
     }
 
@@ -76,20 +89,13 @@ public class CPUTest {
 
     @Test
     public void writePort() throws Exception {
-
+        cpu.writePort(0x20, 0xFF);
+        Mockito.verify(port, Mockito.times(1)).write(0xff);
     }
 
     @Test
     public void readPort() throws Exception {
+        int result = cpu.readPort(0x20);
+        assertEquals(result, 0x1234);
     }
-
-    @Test
-    public void setRegister() throws Exception {
-
-    }
-
-    @Test
-    public void getRegister() throws Exception {
-    }
-
 }

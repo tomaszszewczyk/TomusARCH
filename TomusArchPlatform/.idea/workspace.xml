@@ -26,21 +26,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="CPU.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="CPU.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/CPU.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-373">
-                  <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+                <state relative-caret-position="240">
+                  <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1043#1044#0" expanded="true" />
                     <element signature="e#1112#1113#0" expanded="true" />
                     <element signature="e#1165#1166#0" expanded="true" />
                     <element signature="e#1211#1212#0" expanded="true" />
-                    <element signature="e#3304#3305#0" expanded="true" />
-                    <element signature="e#3345#3346#0" expanded="true" />
-                    <element signature="e#3390#3391#0" expanded="true" />
-                    <element signature="e#3434#3435#0" expanded="true" />
+                    <element signature="e#3350#3351#0" expanded="true" />
+                    <element signature="e#3391#3392#0" expanded="true" />
+                    <element signature="e#3436#3437#0" expanded="true" />
+                    <element signature="e#3480#3481#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -61,24 +61,24 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Console.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Console.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Console.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="601">
-                  <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                <state relative-caret-position="560">
+                  <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
                   <folding>
-                    <element signature="e#256#257#0" expanded="true" />
-                    <element signature="e#288#289#0" expanded="true" />
-                    <element signature="e#421#422#0" expanded="true" />
-                    <element signature="e#453#454#0" expanded="true" />
-                    <element signature="e#580#581#0" expanded="true" />
-                    <element signature="e#612#613#0" expanded="true" />
-                    <element signature="e#707#708#0" expanded="true" />
-                    <element signature="e#743#744#0" expanded="true" />
-                    <element signature="e#785#786#0" expanded="true" />
-                    <element signature="e#812#813#0" expanded="true" />
-                    <element signature="e#848#849#0" expanded="true" />
-                    <element signature="e#875#876#0" expanded="true" />
+                    <element signature="e#324#325#0" expanded="true" />
+                    <element signature="e#356#357#0" expanded="true" />
+                    <element signature="e#489#490#0" expanded="true" />
+                    <element signature="e#521#522#0" expanded="true" />
+                    <element signature="e#648#649#0" expanded="true" />
+                    <element signature="e#680#681#0" expanded="true" />
+                    <element signature="e#775#776#0" expanded="true" />
+                    <element signature="e#811#812#0" expanded="true" />
+                    <element signature="e#853#854#0" expanded="true" />
+                    <element signature="e#893#894#0" expanded="true" />
+                    <element signature="e#929#930#0" expanded="true" />
+                    <element signature="e#963#964#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -94,6 +94,16 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="RAM.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/RAM.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="32">
+                  <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -101,8 +111,8 @@
           <file leaf-file-name="CPUTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/CPUTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1248">
-                  <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+                <state relative-caret-position="256">
+                  <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -110,24 +120,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InstructionTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/instructions/InstructionTest.java">
+          <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/pom.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="144">
-                  <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="20" selection-end-column="55" />
+                <state relative-caret-position="496">
+                  <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="InstructionANDTest.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/instructions/InstructionANDTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="112">
-                  <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -165,10 +163,10 @@
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/instructions/InstructionCRLTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/instructions/InstructionOUTBTest.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/instructions/InstructionCRSTest.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/CPU.java" />
-        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Console.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Machine.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/CPU.java" />
         <option value="$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/CPUTest.java" />
+        <option value="$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Console.java" />
       </list>
     </option>
   </component>
@@ -276,16 +274,6 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="machine" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TomusArchPlatform" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TomusArchPlatform" type="462c0819:PsiDirectoryNode" />
-              <item name="TomusVirtualMachine" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="machine" type="462c0819:PsiDirectoryNode" />
-              <item name="instructions" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -528,7 +516,7 @@
       <workItem from="1505851702853" duration="2638000" />
       <workItem from="1505862291815" duration="58000" />
       <workItem from="1505981288490" duration="44000" />
-      <workItem from="1506253425181" duration="8813000" />
+      <workItem from="1506253425181" duration="10097000" />
     </task>
     <servers />
   </component>
@@ -550,11 +538,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13115000" />
+    <option name="totallyTimeSpent" value="14399000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -562,7 +549,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -608,10 +595,10 @@
             <element signature="e#1112#1113#0" expanded="true" />
             <element signature="e#1165#1166#0" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3345#3346#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -636,10 +623,10 @@
             <element signature="e#1112#1113#0" expanded="true" />
             <element signature="e#1165#1166#0" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3345#3346#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,10 +674,10 @@
             <element signature="e#1112#1113#0" expanded="true" />
             <element signature="e#1165#1166#0" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3345#3346#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -714,14 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="46" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -835,35 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Port.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Console.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="e#256#257#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#612#613#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#785#786#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-            <element signature="e#848#849#0" expanded="true" />
-            <element signature="e#875#876#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Machine.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -885,30 +835,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="10" lean-forward="true" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/CPUTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/CPU.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-373">
-          <caret line="67" column="50" lean-forward="true" selection-start-line="67" selection-start-column="50" selection-end-line="67" selection-end-column="50" />
+        <state relative-caret-position="240">
+          <caret line="15" column="43" lean-forward="true" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1043#1044#0" expanded="true" />
             <element signature="e#1112#1113#0" expanded="true" />
             <element signature="e#1165#1166#0" expanded="true" />
             <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#3304#3305#0" expanded="true" />
-            <element signature="e#3345#3346#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
+            <element signature="e#3350#3351#0" expanded="true" />
+            <element signature="e#3391#3392#0" expanded="true" />
+            <element signature="e#3436#3437#0" expanded="true" />
+            <element signature="e#3480#3481#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/test/java/pl/tomaszszewczyk/machine/CPUTest.java">
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Port.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="78" column="0" lean-forward="true" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="64">
+          <caret line="4" column="24" lean-forward="false" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/RAM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="32">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TomusVirtualMachine/src/main/java/pl/tomaszszewczyk/machine/Console.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#324#325#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#521#522#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#775#776#0" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+            <element signature="e#929#930#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
           </folding>
         </state>
       </provider>
