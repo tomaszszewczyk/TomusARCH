@@ -18,8 +18,22 @@ public abstract class Instruction {
         return result;
     }
 
-    public abstract byte getOpcode();
+    /**
+     * Returns instruction opcode
+     *
+     * @return opcode [int]
+     */
+    public static byte getOpcode() {
+        return (byte) 0xFF;
+    }
 
+    ;
+
+    /**
+     * Execute instruction
+     *
+     * @param parent Machine for instruction to be executed on
+     */
     public abstract void execute(Machine parent) throws InstructionExecutionException;
 
     public static class InstructionExecutionException extends Exception {

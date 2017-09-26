@@ -8,7 +8,6 @@ public class InstructionSETTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionSET();
     }
 
     public void testSetup() {
@@ -17,8 +16,7 @@ public class InstructionSETTest extends InstructionTest {
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(Register.R0)).thenReturn(123);
-        instruction.setDestination(Register.R1);
-        instruction.setValue(123);
+        instruction = new InstructionSET(Register.R1, 123);
 
         instruction.execute(machine);
 

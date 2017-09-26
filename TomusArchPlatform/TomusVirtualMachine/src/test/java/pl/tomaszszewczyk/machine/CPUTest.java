@@ -10,6 +10,7 @@ import static org.mockito.Mockito.mock;
 public class CPUTest {
     private Machine machine;
     private Console console;
+    private Timer timer;
     private Port port;
     private CPU cpu;
 
@@ -17,12 +18,16 @@ public class CPUTest {
     public void setUp() throws Exception {
         machine = mock(Machine.class);
         console = mock(Console.class);
+        timer = mock(Timer.class);
         port = mock(Port.class);
         Mockito.when(machine.getConsole()).thenReturn(console);
+        Mockito.when(machine.getTimer()).thenReturn(timer);
 
         Mockito.when(console.getControlPort()).thenReturn(port);
         Mockito.when(console.getDataAvailablePort()).thenReturn(port);
         Mockito.when(console.getReadWritePort()).thenReturn(port);
+        Mockito.when(timer.getControlPort()).thenReturn(port);
+        Mockito.when(timer.getCounterPort()).thenReturn(port);
 
         Mockito.when(port.read()).thenReturn(0x1234);
 

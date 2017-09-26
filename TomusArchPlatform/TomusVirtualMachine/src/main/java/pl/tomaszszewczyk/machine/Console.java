@@ -5,6 +5,8 @@ public class Console {
     private DataAvailablePort dataAvailablePort = new DataAvailablePort();
     private ControlPort controlPort = new ControlPort();
 
+    private boolean interruptOnNewDataFlag = false;
+
     class ReadWritePort implements Port {
 
         public int read() {
@@ -12,7 +14,7 @@ public class Console {
         }
 
         public void write(int value) {
-
+            System.out.print((char) value);
         }
     }
 
@@ -30,11 +32,11 @@ public class Console {
     class ControlPort implements Port {
 
         public int read() {
-            return 0;
+            return interruptOnNewDataFlag ? 0x01 : 0x00;
         }
 
         public void write(int value) {
-
+            interruptOnNewDataFlag = (value & 0x01) != 0;
         }
     }
 

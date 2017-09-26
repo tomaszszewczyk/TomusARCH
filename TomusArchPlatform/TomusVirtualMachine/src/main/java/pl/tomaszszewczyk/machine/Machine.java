@@ -2,12 +2,10 @@ package pl.tomaszszewczyk.machine;
 
 public class Machine {
 
-    private CPU cpu;
+    private CPU cpu = new CPU(this);
     private RAM ram;
-
-    public Machine() {
-        cpu = new CPU(this);
-    }
+    private Console console = new Console();
+    private Timer timer = new Timer();
 
     public CPU getCPU() {
         return cpu;
@@ -26,6 +24,10 @@ public class Machine {
     }
 
     public Console getConsole() {
-        return null;
+        return console;
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 }

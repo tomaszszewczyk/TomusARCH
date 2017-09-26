@@ -20,7 +20,6 @@ public class InstructionSTTest extends TestCase {
         ram = mock(RAM.class);
         Mockito.when(machine.getCPU()).thenReturn(cpu);
         Mockito.when(machine.getRAM()).thenReturn(ram);
-        instruction = new InstructionST();
     }
 
     public void testSetup() {
@@ -30,8 +29,7 @@ public class InstructionSTTest extends TestCase {
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xAABB);
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(0xCCDD);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionST(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 

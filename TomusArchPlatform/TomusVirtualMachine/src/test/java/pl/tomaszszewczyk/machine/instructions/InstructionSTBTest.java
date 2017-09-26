@@ -20,18 +20,16 @@ public class InstructionSTBTest extends TestCase {
         ram = mock(RAM.class);
         Mockito.when(machine.getCPU()).thenReturn(cpu);
         Mockito.when(machine.getRAM()).thenReturn(ram);
-        instruction = new InstructionSTB();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x04);
+        assertEquals(instruction.getOpcode(), 0x05);
     }
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xAABB);
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(0xCCDD);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionSTB(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 

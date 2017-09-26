@@ -8,7 +8,6 @@ public class InstructionMOVTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionMOV();
     }
 
     public void testSetup() {
@@ -17,8 +16,7 @@ public class InstructionMOVTest extends InstructionTest {
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(Register.R0)).thenReturn(123);
-        instruction.setSource(Register.R0);
-        instruction.setDestination(Register.R1);
+        instruction = new InstructionMOV(Register.R1, Register.R0);
 
         instruction.execute(machine);
 

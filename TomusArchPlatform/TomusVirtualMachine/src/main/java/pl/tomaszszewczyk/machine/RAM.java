@@ -1,11 +1,19 @@
 package pl.tomaszszewczyk.machine;
 
-public abstract class RAM {
-    public abstract int getWord(int address);
+public class RAM {
+    public int getWord(int address) {
+        return 0;
+    }
 
-    public abstract void writeWord(int address, int word);
+    public void writeWord(int address, int word) {
 
-    public abstract byte getByte(int source_address);
+    }
 
-    public abstract void writeByte(int dst_address, byte data);
+    public byte getByte(int source_address) {
+        return 0;
+    }
+
+    public void writeByte(int dst_address, byte data) {
+
+    }
 }

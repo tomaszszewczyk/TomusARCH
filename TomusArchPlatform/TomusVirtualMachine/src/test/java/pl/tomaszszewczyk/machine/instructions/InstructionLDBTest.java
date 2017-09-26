@@ -8,7 +8,6 @@ public class InstructionLDBTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionLDB();
     }
 
     public void testSetup() {
@@ -18,8 +17,7 @@ public class InstructionLDBTest extends InstructionTest {
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xAA);
         Mockito.when(ram.getByte(0xAA)).thenReturn((byte) 0xBB);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionLDB(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 

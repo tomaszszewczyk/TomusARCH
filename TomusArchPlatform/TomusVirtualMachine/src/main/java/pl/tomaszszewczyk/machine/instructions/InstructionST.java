@@ -5,20 +5,29 @@ import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 import pl.tomaszszewczyk.machine.RAM;
 
+/**
+ * Instruction ST - write word to RAM
+ * Write value from src register to RAM at address given in src
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionST extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination address register
+     * @param src Source register
+     */
+    public InstructionST(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
+    }
+
+    public static byte getOpcode() {
         return 0x04;
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
     }
 
     public void execute(Machine parent) {

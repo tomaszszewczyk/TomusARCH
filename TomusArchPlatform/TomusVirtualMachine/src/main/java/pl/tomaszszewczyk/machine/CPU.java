@@ -68,9 +68,15 @@ public class CPU {
         controlRegisters = new ControlRegisters();
 
         ports = new HashMap<Integer, Port>();
-        ports.put(0x20, parent.getConsole().getReadWritePort());
-        ports.put(0x21, parent.getConsole().getDataAvailablePort());
-        ports.put(0x22, parent.getConsole().getControlPort());
+
+        Console console = parent.getConsole();
+        ports.put(0x20, console.getReadWritePort());
+        ports.put(0x21, console.getDataAvailablePort());
+        ports.put(0x22, console.getControlPort());
+
+        Timer timer = parent.getTimer();
+        ports.put(0x70, timer.getControlPort());
+        ports.put(0x71, timer.getCounterPort());
     }
 
     public void setFlagZF() {

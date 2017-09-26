@@ -5,20 +5,30 @@ import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 import pl.tomaszszewczyk.machine.RAM;
 
+/**
+ * Instruction STB - writes byte to RAM
+ * Store byte from register src in RAM at address in register dst
+ *
+ * @author Tomasz Szewczyk
+ */
+
 public class InstructionSTB extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
-        return 0x04;
+    /**
+     * Instruction constructor
+     *
+     * @param dst Register with destination address
+     * @param src Source register
+     */
+    public InstructionSTB(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
     }
 
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
+    public static byte getOpcode() {
+        return 0x05;
     }
 
     public void execute(Machine parent) {
