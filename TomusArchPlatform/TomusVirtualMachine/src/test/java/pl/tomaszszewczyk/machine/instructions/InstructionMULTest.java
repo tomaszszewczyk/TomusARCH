@@ -8,18 +8,16 @@ public class InstructionMULTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionMUL();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x12);
+        assertEquals(InstructionMUL.getOpcode(), 0x12);
     }
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(10);
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(20);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionMUL(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 

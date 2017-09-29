@@ -10,7 +10,6 @@ import pl.tomaszszewczyk.machine.Machine;
  *
  * @author Tomasz Szewczyk
  */
-
 public class InstructionADD extends Instruction {
     private Register src;
     private Register dst;

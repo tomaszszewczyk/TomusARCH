@@ -4,20 +4,29 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * Instruction OR - calculates logical alternative from two values
+ * OR values from dst and source, result is saved in dst
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionOR extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination register
+     * @param src Source register
+     */
+    public InstructionOR(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
+    }
+
+    public static byte getOpcode() {
         return 0x15;
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
     }
 
     public void execute(Machine parent) {

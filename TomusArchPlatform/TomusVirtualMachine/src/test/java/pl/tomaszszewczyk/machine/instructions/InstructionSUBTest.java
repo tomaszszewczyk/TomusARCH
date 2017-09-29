@@ -20,18 +20,16 @@ public class InstructionSUBTest extends TestCase {
         ram = mock(RAM.class);
         Mockito.when(machine.getCPU()).thenReturn(cpu);
         Mockito.when(machine.getRAM()).thenReturn(ram);
-        instruction = new InstructionSUB();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x10);
+        assertEquals(InstructionSUB.getOpcode(), 0x10);
     }
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0x1111);
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(0x2222);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionSUB(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 

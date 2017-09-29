@@ -4,20 +4,29 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * Instruction SUB - subtracts two values
+ * Subtract values from dst and source, result is saved in dst
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionSUB extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination register
+     * @param src Source register
+     */
+    public InstructionSUB(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
+    }
+
+    public static byte getOpcode() {
         return 0x10;
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
     }
 
     public void execute(Machine parent) {
