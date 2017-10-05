@@ -4,20 +4,25 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * Instruction CMP - compare two registers
+ * Compares dst register to src register and saves result in FR register
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionCMP extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
-        return 0x20;
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination register
+     * @param src Source register
+     */
+    public InstructionCMP(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
     }
 
     public void execute(Machine parent) {

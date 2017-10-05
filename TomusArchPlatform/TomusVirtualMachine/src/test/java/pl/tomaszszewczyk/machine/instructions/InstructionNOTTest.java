@@ -8,16 +8,15 @@ public class InstructionNOTTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionNOT();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x18);
+        assertEquals(InstructionNOT.getOpcode(), 0x18);
     }
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(0xFF000000);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionNOT(CPU.Register.R1);
 
         instruction.execute(machine);
 

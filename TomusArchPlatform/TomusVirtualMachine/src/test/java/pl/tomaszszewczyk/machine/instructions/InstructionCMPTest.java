@@ -8,18 +8,16 @@ public class InstructionCMPTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionCMP();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x20);
+        assertEquals(InstructionCMP.getOpcode(), 0x20);
     }
 
     public void testEqual() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(10);  //source
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(10);  //destination
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionCMP(CPU.Register.R1, CPU.Register.R0);
 
         instruction.execute(machine);
 
@@ -30,8 +28,8 @@ public class InstructionCMPTest extends InstructionTest {
     public void testGreater() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(10);  //source
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(20);  //destination
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionCMP(CPU.Register.R1, CPU.Register.R0);
+
 
         instruction.execute(machine);
 
@@ -42,8 +40,8 @@ public class InstructionCMPTest extends InstructionTest {
     public void testSmaller() {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(20);  //source
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(10);  //destination
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionCMP(CPU.Register.R1, CPU.Register.R0);
+
 
         instruction.execute(machine);
 

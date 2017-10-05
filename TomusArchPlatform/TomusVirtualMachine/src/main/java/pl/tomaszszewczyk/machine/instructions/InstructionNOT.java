@@ -4,16 +4,26 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * Instruction NOT - negate value
+ * negate value from dst, result is saved in dst
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionNOT extends Instruction {
-    private Register src;
     private Register dst;
 
-    public byte getOpcode() {
-        return 0x18;
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination register
+     */
+    public InstructionNOT(Register dst) {
+        this.dst = dst;
     }
 
-    public void setDestination(Register adst) {
-        dst = adst;
+    public static byte getOpcode() {
+        return 0x18;
     }
 
     public void execute(Machine parent) {

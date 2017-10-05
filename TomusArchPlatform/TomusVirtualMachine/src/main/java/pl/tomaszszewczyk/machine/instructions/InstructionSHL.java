@@ -4,20 +4,28 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * Instruction SHL - shifts dst left, number of steps is taken from src
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionSHL extends Instruction {
     private Register src;
     private Register dst;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param dst Destination register
+     * @param src Source register
+     */
+    public InstructionSHL(Register dst, Register src) {
+        this.dst = dst;
+        this.src = src;
+    }
+
+    public static byte getOpcode() {
         return 0x19;
-    }
-
-    public void setSource(Register asrc) {
-        src = asrc;
-    }
-
-    public void setDestination(Register adst) {
-        dst = adst;
     }
 
     public void execute(Machine parent) {
