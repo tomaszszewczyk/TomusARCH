@@ -5,9 +5,15 @@ import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 import pl.tomaszszewczyk.machine.RAM;
 
+/**
+ * InstructionRET - return
+ * Pop address from stack and perform jump to this address
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionRET extends Instruction {
 
-    public byte getOpcode() {
+    public static byte getOpcode() {
         return 0x44;
     }
 

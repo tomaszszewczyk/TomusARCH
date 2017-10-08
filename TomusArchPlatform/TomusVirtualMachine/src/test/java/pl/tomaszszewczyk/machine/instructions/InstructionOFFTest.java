@@ -11,7 +11,7 @@ public class InstructionOFFTest extends InstructionTest {
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), (byte) 0xF5);
+        assertEquals(InstructionOFF.getOpcode(), (byte) 0xF5);
     }
 
     public void testExecute() {

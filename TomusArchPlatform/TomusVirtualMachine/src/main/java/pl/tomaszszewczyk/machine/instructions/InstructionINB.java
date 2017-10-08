@@ -4,30 +4,39 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * InstructionINB - load byte from input
+ * Copy byte from given port and saves value in dst register
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionINB extends Instruction {
-    private Register destinationRegister;
-    private int source;
+    private Register dst;
+    private int imm8;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param imm8 Input port address
+     * @param dst  destination register address
+     */
+    public InstructionINB(int imm8, Register dst) {
+        this.dst = dst;
+        this.imm8 = imm8;
+    }
+
+    public static byte getOpcode() {
         return (byte) 0xF3;
-    }
-
-    public void setDestination(Register aDestinationRegister) {
-        destinationRegister = aDestinationRegister;
-    }
-
-    public void setSource(int aSource) {
-        source = aSource;
     }
 
     public void execute(Machine parent) throws InstructionExecutionException {
         CPU cpu = parent.getCPU();
-        int value = 0;
+        int value;
         try {
-            value = cpu.readPort(source);
+            value = cpu.readPort(imm8);
         } catch (CPU.WrongPortAddressException e) {
             throw new InstructionExecutionException();
         }
-        cpu.setRegister(destinationRegister, value);
+        cpu.setRegister(dst, value);
     }
 }

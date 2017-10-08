@@ -12,7 +12,7 @@ public class InstructionRETTest extends InstructionTest {
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x44);
+        assertEquals(InstructionRET.getOpcode(), 0x44);
     }
 
     public void testExecute() {

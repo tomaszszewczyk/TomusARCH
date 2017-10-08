@@ -8,17 +8,15 @@ public class InstructionCRLTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionCRL();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), (byte) 0xF0);
+        assertEquals(InstructionCRL.getOpcode(), (byte) 0xF0);
     }
 
     public void testExecute() throws Exception {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xBB);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(0x100);
+        instruction = new InstructionCRL(0x100, CPU.Register.R0);
 
         instruction.execute(machine);
 

@@ -4,15 +4,26 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * InstructionJBE - jump if below or equal
+ * Check if flag CF or ZF (or both) is set - if yes, perform relative jump to given address
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionJBE extends Instruction {
-    private int address;
+    private int imm16;
 
-    public byte getOpcode() {
-        return 0x25;
+    /**
+     * Instruction constructor
+     *
+     * @param imm16 Destination address
+     */
+    public InstructionJBE(int imm16) {
+        this.imm16 = imm16;
     }
 
-    public void setRelativeAddress(int aAddress) {
-        address = aAddress;
+    public static byte getOpcode() {
+        return 0x25;
     }
 
     public void execute(Machine parent) {
@@ -23,7 +34,7 @@ public class InstructionJBE extends Instruction {
         int pc = cpu.getRegister(Register.PC) + 3;
 
         if (flagCF || flagZF) {
-            pc += address;
+            pc += imm16;
             cpu.setRegister(Register.PC, pc);
         }
     }

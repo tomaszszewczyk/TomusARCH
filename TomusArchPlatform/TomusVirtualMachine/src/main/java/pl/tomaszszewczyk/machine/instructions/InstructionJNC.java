@@ -4,15 +4,26 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * InstructionJNC - jump if not carry
+ * Check if flag CF is clear - if yes, perform relative jump to given address
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionJNC extends Instruction {
-    private int address;
+    private int imm16;
 
-    public byte getOpcode() {
-        return 0x24;
+    /**
+     * Instruction constructor
+     *
+     * @param imm16 Destination address
+     */
+    public InstructionJNC(int imm16) {
+        this.imm16 = imm16;
     }
 
-    public void setRelativeAddress(int aAddress) {
-        address = aAddress;
+    public static byte getOpcode() {
+        return 0x24;
     }
 
     public void execute(Machine parent) {
@@ -22,7 +33,7 @@ public class InstructionJNC extends Instruction {
         int pc = cpu.getRegister(Register.PC) + 3;
 
         if (!flagCF) {
-            pc += address;
+            pc += imm16;
             cpu.setRegister(Register.PC, pc);
         }
     }

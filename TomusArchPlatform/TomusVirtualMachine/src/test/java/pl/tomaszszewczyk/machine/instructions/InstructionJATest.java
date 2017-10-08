@@ -8,18 +8,17 @@ public class InstructionJATest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionJA();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x26);
+        assertEquals(InstructionJA.getOpcode(), 0x26);
     }
 
     public void testExecuteCFSetZFClear() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(false);
-        instruction.setAddress(0xED);
+        instruction = new InstructionJA(0xED);
 
         instruction.execute(machine);
 
@@ -31,7 +30,7 @@ public class InstructionJATest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(true);
-        instruction.setAddress(0xED);
+        instruction = new InstructionJA(0xED);
 
         instruction.execute(machine);
 

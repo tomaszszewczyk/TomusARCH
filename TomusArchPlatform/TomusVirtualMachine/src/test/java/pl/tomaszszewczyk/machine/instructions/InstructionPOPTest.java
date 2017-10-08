@@ -8,7 +8,6 @@ public class InstructionPOPTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionPOP();
     }
 
     public void testSetup() {
@@ -18,7 +17,7 @@ public class InstructionPOPTest extends InstructionTest {
     public void testExecuteBothSet() {
         Mockito.when(cpu.getRegister(CPU.Register.SP)).thenReturn(0x0F);
         Mockito.when(ram.getWord(0x0F)).thenReturn(0xAA);
-        instruction.setDestination(CPU.Register.R0);
+        instruction = new InstructionPOP(CPU.Register.R0);
 
         instruction.execute(machine);
 

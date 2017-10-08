@@ -8,7 +8,6 @@ public class InstructionJMPTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionJMP();
     }
 
     public void testSetup() {
@@ -17,7 +16,7 @@ public class InstructionJMPTest extends InstructionTest {
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0xA0);
-        instruction.setAddress(0x03);
+        instruction = new InstructionJMP(0x03);
 
         instruction.execute(machine);
 

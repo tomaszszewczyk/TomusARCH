@@ -8,17 +8,15 @@ public class InstructionOUTBTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionOUTB();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), (byte) 0xF2);
+        assertEquals(InstructionOUTB.getOpcode(), (byte) 0xF2);
     }
 
     public void testExecute() throws Exception {
         Mockito.when(cpu.getRegister(CPU.Register.R0)).thenReturn(0xBB);
-        instruction.setSource(CPU.Register.R0);
-        instruction.setDestination(0x100);
+        instruction = new InstructionOUTB(0x100, CPU.Register.R0);
 
         instruction.execute(machine);
 

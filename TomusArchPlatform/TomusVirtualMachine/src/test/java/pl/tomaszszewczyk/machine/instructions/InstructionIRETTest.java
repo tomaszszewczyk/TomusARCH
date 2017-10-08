@@ -9,7 +9,7 @@ public class InstructionIRETTest extends InstructionTest {
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), (byte) 0xF4);
+        assertEquals(InstructionIRET.getOpcode(), (byte) 0xF4);
     }
 
     public void testExecute() {

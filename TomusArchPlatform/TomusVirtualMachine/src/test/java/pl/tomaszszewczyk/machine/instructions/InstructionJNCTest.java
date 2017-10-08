@@ -8,7 +8,6 @@ public class InstructionJNCTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionJNC();
     }
 
     public void testSetup() {
@@ -18,7 +17,7 @@ public class InstructionJNCTest extends InstructionTest {
     public void testExecuteCFClear() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(false);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJNC(0xED);
 
         instruction.execute(machine);
 
@@ -29,7 +28,7 @@ public class InstructionJNCTest extends InstructionTest {
     public void testExecuteCFSet() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJNC(0xED);
 
         instruction.execute(machine);
 

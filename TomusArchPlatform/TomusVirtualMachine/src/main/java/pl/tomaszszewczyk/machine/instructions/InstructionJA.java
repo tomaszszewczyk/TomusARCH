@@ -4,15 +4,31 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.CPU.Register;
 import pl.tomaszszewczyk.machine.Machine;
 
+/**
+ * InstructionJA - jump if above
+ * Check if flag CF is set and ZF is clear simultaneously - if yes, perform relative jump to
+ * given address
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionJA extends Instruction {
-    private int address;
+    private int imm16;
 
-    public byte getOpcode() {
+    /**
+     * Instruction constructor
+     *
+     * @param imm16 Destination address
+     */
+    public InstructionJA(int imm16) {
+        this.imm16 = imm16;
+    }
+
+    public static byte getOpcode() {
         return 0x26;
     }
 
-    public void setAddress(int aAddress) {
-        address = aAddress;
+    public void setImm16(int aAddress) {
+        imm16 = aAddress;
     }
 
     public void execute(Machine parent) {
@@ -23,7 +39,7 @@ public class InstructionJA extends Instruction {
         int pc = cpu.getRegister(Register.PC) + 3;
 
         if (flagCF && (!flagZF)) {
-            pc += address;
+            pc += imm16;
             cpu.setRegister(Register.PC, pc);
         }
     }

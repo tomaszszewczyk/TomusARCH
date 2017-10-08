@@ -8,7 +8,6 @@ public class InstructionJBETest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionJBE();
     }
 
     public void testSetup() {
@@ -19,7 +18,7 @@ public class InstructionJBETest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(true);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJBE(0xED);
 
         instruction.execute(machine);
 
@@ -31,7 +30,7 @@ public class InstructionJBETest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(true);
         Mockito.when(cpu.getFlagZF()).thenReturn(false);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJBE(0xED);
 
         instruction.execute(machine);
 
@@ -43,7 +42,7 @@ public class InstructionJBETest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(false);
         Mockito.when(cpu.getFlagZF()).thenReturn(true);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJBE(0xED);
 
         instruction.execute(machine);
 
@@ -55,7 +54,7 @@ public class InstructionJBETest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0x0F);
         Mockito.when(cpu.getFlagCF()).thenReturn(false);
         Mockito.when(cpu.getFlagZF()).thenReturn(false);
-        instruction.setRelativeAddress(0xED);
+        instruction = new InstructionJBE(0xED);
 
         instruction.execute(machine);
 

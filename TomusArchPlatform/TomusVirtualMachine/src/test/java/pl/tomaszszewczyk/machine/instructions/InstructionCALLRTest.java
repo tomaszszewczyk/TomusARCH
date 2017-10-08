@@ -8,18 +8,17 @@ public class InstructionCALLRTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionCALLR();
     }
 
     public void testSetup() {
-        assertEquals(instruction.getOpcode(), 0x43);
+        assertEquals(InstructionCALLR.getOpcode(), 0x43);
     }
 
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0xAA);
         Mockito.when(cpu.getRegister(CPU.Register.SP)).thenReturn(0xBB);
         Mockito.when(cpu.getRegister(CPU.Register.R9)).thenReturn(0x11);
-        instruction.setAddressRegister(CPU.Register.R9);
+        instruction = new InstructionCALLR(CPU.Register.R9);
 
         instruction.execute(machine);
 

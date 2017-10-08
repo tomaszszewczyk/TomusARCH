@@ -8,7 +8,6 @@ public class InstructionINBTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionINB();
     }
 
     public void testSetup() {
@@ -17,8 +16,7 @@ public class InstructionINBTest extends InstructionTest {
 
     public void testExecute() throws Exception {
         Mockito.when(cpu.readPort(0x100)).thenReturn(0xBB);
-        instruction.setSource(0x100);
-        instruction.setDestination(CPU.Register.R1);
+        instruction = new InstructionINB(0x100, CPU.Register.R1);
 
         instruction.execute(machine);
 

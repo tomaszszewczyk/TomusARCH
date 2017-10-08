@@ -8,7 +8,6 @@ public class InstructionCALLTest extends InstructionTest {
 
     public void setUp() {
         super.setUp();
-        instruction = new InstructionCALL();
     }
 
     public void testSetup() {
@@ -18,7 +17,7 @@ public class InstructionCALLTest extends InstructionTest {
     public void testExecute() {
         Mockito.when(cpu.getRegister(CPU.Register.PC)).thenReturn(0xAA);
         Mockito.when(cpu.getRegister(CPU.Register.SP)).thenReturn(0xBB);
-        instruction.setAddress(0x11);
+        instruction = new InstructionCALL(0x11);
 
         instruction.execute(machine);
 

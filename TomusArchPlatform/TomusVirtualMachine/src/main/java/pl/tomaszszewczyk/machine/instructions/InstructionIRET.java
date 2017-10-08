@@ -4,9 +4,15 @@ import pl.tomaszszewczyk.machine.CPU;
 import pl.tomaszszewczyk.machine.Machine;
 import pl.tomaszszewczyk.machine.RAM;
 
+/**
+ * InstructionIRET - Interrupt return
+ * Restore registers state saved on stack
+ *
+ * @author Tomasz Szewczyk
+ */
 public class InstructionIRET extends Instruction {
 
-    public byte getOpcode() {
+    public static byte getOpcode() {
         return (byte) 0xF4;
     }
 

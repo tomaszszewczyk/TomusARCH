@@ -25,6 +25,10 @@ public class InstructionCMP extends Instruction {
         this.src = src;
     }
 
+    public static byte getOpcode() {
+        return 0x20;
+    }
+
     public void execute(Machine parent) {
         CPU cpu = parent.getCPU();
 
