@@ -30,7 +30,6 @@ public class InstructionCMPTest extends InstructionTest {
         Mockito.when(cpu.getRegister(CPU.Register.R1)).thenReturn(20);  //destination
         instruction = new InstructionCMP(CPU.Register.R1, CPU.Register.R0);
 
-
         instruction.execute(machine);
 
         Mockito.verify(cpu, Mockito.times(0)).setFlagZF();

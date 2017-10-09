@@ -2,9 +2,9 @@ package pl.tomaszszewczyk.machine;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 import static org.junit.Assert.*;
+import static org.mockito.Mockito.*;
 import static org.mockito.Mockito.mock;
 
 public class CPUTest {
@@ -12,6 +12,9 @@ public class CPUTest {
     private Console console;
     private Timer timer;
     private Port port;
+    private Console.ReadWritePort consoleReadWritePort;
+    private Console.DataAvailablePort consoleDataAvailablePort;
+    private Console.ControlPort consoleControlPort;
     private CPU cpu;
 
     @Before
@@ -20,16 +23,28 @@ public class CPUTest {
         console = mock(Console.class);
         timer = mock(Timer.class);
         port = mock(Port.class);
-        Mockito.when(machine.getConsole()).thenReturn(console);
-        Mockito.when(machine.getTimer()).thenReturn(timer);
+        consoleReadWritePort = mock(Console.ReadWritePort.class);
+        consoleDataAvailablePort = mock(Console.DataAvailablePort.class);
+        consoleControlPort = mock(Console.ControlPort.class);
 
-        Mockito.when(console.getControlPort()).thenReturn(port);
-        Mockito.when(console.getDataAvailablePort()).thenReturn(port);
-        Mockito.when(console.getReadWritePort()).thenReturn(port);
-        Mockito.when(timer.getControlPort()).thenReturn(port);
-        Mockito.when(timer.getCounterPort()).thenReturn(port);
+        when(machine.getConsole())
+                .thenReturn(console);
+        when(machine.getTimer())
+                .thenReturn(timer);
 
-        Mockito.when(port.read()).thenReturn(0x1234);
+        when(console.getControlPort())
+                .thenReturn(consoleControlPort);
+        when(console.getDataAvailablePort())
+                .thenReturn(consoleDataAvailablePort);
+        when(console.getReadWritePort())
+                .thenReturn(consoleReadWritePort);
+        when(timer.getControlPort())
+                .thenReturn(port);
+        when(timer.getCounterPort())
+                .thenReturn(port);
+
+        when(port.read())
+                .thenReturn(0x1234);
 
         cpu = new CPU(machine);
     }
@@ -95,7 +110,7 @@ public class CPUTest {
     @Test
     public void writePort() throws Exception {
         cpu.writePort(0x20, 0xFF);
-        Mockito.verify(port, Mockito.times(1)).write(0xff);
+        verify(port, times(1)).write(0xff);
     }
 
     @Test
