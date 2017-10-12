@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import static org.mockito.Mockito.mock;
 
 public class CPUTest {
     private Machine machine;
@@ -42,9 +41,6 @@ public class CPUTest {
                 .thenReturn(port);
         when(timer.getCounterPort())
                 .thenReturn(port);
-
-        when(port.read())
-                .thenReturn(0x1234);
 
         cpu = new CPU(machine);
     }
@@ -110,11 +106,14 @@ public class CPUTest {
     @Test
     public void writePort() throws Exception {
         cpu.writePort(0x20, 0xFF);
-        verify(port, times(1)).write(0xff);
+        verify(consoleReadWritePort, times(1)).write(0xff);
     }
 
     @Test
     public void readPort() throws Exception {
+        when(consoleReadWritePort.read())
+                .thenReturn(0x1234);
+
         int result = cpu.readPort(0x20);
         assertEquals(result, 0x1234);
     }

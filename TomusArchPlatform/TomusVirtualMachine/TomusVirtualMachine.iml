@@ -24,5 +24,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.powermock:powermock-api-mockito2:1.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.powermock:powermock-api-mockito-common:1.7.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.powermock:powermock-api-support:1.7.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.nitorcreations:junit-runners:1.2" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm:4.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm-commons:4.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.ow2.asm:asm-tree:4.1" level="project" />
   </component>
 </module>
