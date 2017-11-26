@@ -1,4 +1,4 @@
 package pl.tomaszszewczyk.machine;
 
-public class RAM {
+public class IntController {
 }
