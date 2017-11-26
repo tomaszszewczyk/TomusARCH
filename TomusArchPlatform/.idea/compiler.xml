@@ -17,7 +17,7 @@
       <module name="TomusArchPlatform" target="1.5" />
       <module name="TomusAssembler" target="1.5" />
       <module name="TomusBrainfuckCompiler" target="1.5" />
-      <module name="TomusVirtualMachine" target="1.5" />
+      <module name="TomusVirtualMachine" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>

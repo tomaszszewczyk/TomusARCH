@@ -1,5 +1,7 @@
 package pl.tomaszszewczyk.machine.Registers;
 
+import pl.tomaszszewczyk.machine.Instruction;
+
 /**
  * Program counter register class
  *
@@ -8,9 +10,9 @@ package pl.tomaszszewczyk.machine.Registers;
 public class ProgramCounterRegister extends Register {
 
     /**
-     * Increment register value
+     * Increment register value by the size of instruction
      */
     public void increment() {
-        value++;
+        value += Instruction.size;
     }
 }
