@@ -10,12 +10,12 @@ public class FlagRegister extends Register {
     /**
      * Zero flag (ZF) bit mask
      */
-    public final int zeroFlagMask = 0x01;
+    public static final int zeroFlagMask = 0x01;
 
     /**
      * Carry flag (CF) bit mask
      */
-    public final int carryFlagMask = 0x03;
+    public static final int carryFlagMask = 0x03;
 
     /**
      * Get zero flag (ZF) value
@@ -23,7 +23,7 @@ public class FlagRegister extends Register {
      * @return zero flag (ZF) value
      */
     public boolean getZeroFlag() {
-        return (value & zeroFlagMask) == 0;
+        return (value & zeroFlagMask) != 0;
     }
 
     /**
@@ -44,7 +44,7 @@ public class FlagRegister extends Register {
      * @return carry flag (CF) value
      */
     public boolean getCarryFlag() {
-        return (value & carryFlagMask) == 0;
+        return (value & carryFlagMask) != 0;
     }
 
     /**

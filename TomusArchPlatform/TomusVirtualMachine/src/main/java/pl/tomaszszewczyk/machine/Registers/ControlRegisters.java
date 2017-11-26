@@ -20,6 +20,15 @@ public class ControlRegisters {
     private GeneralPurposeRegister registers[] = new GeneralPurposeRegister[numOfRegisters];
 
     /**
+     * Default constructor, creates registers
+     */
+    public ControlRegisters() {
+        for (int i = 0; i < numOfRegisters; i++) {
+            registers[i] = new GeneralPurposeRegister();
+        }
+    }
+
+    /**
      * Check of given address is in range of available registers
      *
      * @param address address to be checked
