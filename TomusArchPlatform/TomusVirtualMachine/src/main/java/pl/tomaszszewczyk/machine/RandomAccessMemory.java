@@ -14,7 +14,7 @@ public class RandomAccessMemory {
         return 0 <= address && address < memorySize;
     }
 
-    public void setByte(int address, byte value) {
+    public void writeByte(int address, byte value) {
         if(!isInRange(address)) {
             int_controller.report(Interrupt.MemoryRangeExceeded);
             return;
@@ -23,7 +23,7 @@ public class RandomAccessMemory {
         memory[address] = value;
     }
 
-    public int getByte(int address) {
+    public byte getByte(int address) {
         if(!isInRange(address)) {
             int_controller.report(Interrupt.MemoryRangeExceeded);
             return 0;

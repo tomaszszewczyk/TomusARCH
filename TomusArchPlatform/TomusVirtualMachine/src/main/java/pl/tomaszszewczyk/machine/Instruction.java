@@ -39,6 +39,7 @@ public class Instruction {
     public static final byte JNC   = (byte) 0x24;
     public static final byte JAE   = (byte) 0x24;
     public static final byte JBE   = (byte) 0x25;
+    public static final byte JA    = (byte) 0x26;
     public static final byte PUSH  = (byte) 0x30;
     public static final byte POP   = (byte) 0x31;
     public static final byte JMP   = (byte) 0x40;

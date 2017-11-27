@@ -11,13 +11,13 @@ public class StackPointerRegister extends Register {
      * Incremet register value
      */
     public void increment() {
-        value++;
+        value += 4;
     }
 
     /**
      * Decrement register value
      */
     public void decrement() {
-        value--;
+        value -= 4;
     }
 }

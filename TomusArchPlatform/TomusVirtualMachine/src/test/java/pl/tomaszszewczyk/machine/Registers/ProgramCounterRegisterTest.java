@@ -1,6 +1,7 @@
 package pl.tomaszszewczyk.machine.Registers;
 
 import org.junit.Test;
+import pl.tomaszszewczyk.machine.Instruction;
 
 import static org.junit.Assert.*;
 
@@ -12,7 +13,7 @@ public class ProgramCounterRegisterTest {
         register.setValue(1234);
         register.increment();
 
-        assertEquals(1235, register.getValue());
+        assertEquals(1234 + Instruction.size, register.getValue());
     }
 
 }
