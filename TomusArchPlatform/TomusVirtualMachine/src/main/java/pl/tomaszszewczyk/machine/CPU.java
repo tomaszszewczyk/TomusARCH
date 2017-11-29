@@ -4,6 +4,7 @@ import pl.tomaszszewczyk.machine.Registers.*;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class CPU {
     private GeneralPurposeRegister R0 = new GeneralPurposeRegister();
@@ -88,6 +89,9 @@ public class CPU {
 
     public void triggerTick() {
         if (int_controller.isAny()) {
+            for (byte register_id : registers.keySet()) {
+
+            }
 
         } else {
             Instruction instruction = rom.getInstruction(PC.getValue());
@@ -601,14 +605,12 @@ public class CPU {
     private void executePUSH(Instruction instruction) {
         assert instruction.getOpcode() == Instruction.PUSH : "Wrong instruction";
 
-        SP.decrement();
-        int address = SP.getValue();
         int value = registers.get(instruction.getRsrc()).getValue();
 
-        ram.writeByte(address, (byte) value);
-        ram.writeByte(address + 1, (byte) (value >> 8));
-        ram.writeByte(address + 2, (byte) (value >> 16));
-        ram.writeByte(address + 3, (byte) (value >> 24));
+        SP.decrement(); ram.writeByte(SP.getValue(), (byte) value);
+        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 8));
+        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 16));
+        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 24));
     }
 
     /**
@@ -621,6 +623,92 @@ public class CPU {
     private void executePOP(Instruction instruction) {
         assert instruction.getOpcode() == Instruction.POP : "Wrong instruction";
 
+        int value;
+        value  = (int) ram.getByte(SP.getValue());       SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 8;  SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 16; SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 24; SP.increment();
+
+        registers.get(instruction.getRdst()).setValue(value);
+    }
+
+    /**
+     * Execute instruction JMP
+     * Relative jump to address given in immediate
+     *
+     * @param instruction Instruction to be executed
+     */
+    private void executeJMP(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.JMP : "Wrong instruction";
+
+        PC.setValue(PC.getValue() + instruction.getImmediate());
+    }
+
+    /**
+     * Execute instruction JMPR
+     * Relative jump to address given in src register
+     *
+     * @param instruction Instruction to be executed
+     */
+    private void executeJMPR(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.JMPR : "Wrong instruction";
+
+        int imm = registers.get(instruction.getRsrc()).getValue();
+        PC.setValue(PC.getValue() + imm);
+    }
+
+    /**
+     * Execute instruction CALL
+     * Save next instruction address on stack, and relative jump to immediate
+     *
+     * @param instruction Instruction to be executed
+     */
+    private void executeCALL(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.CALL : "Wrong instruction";
+
+        SP.decrement();
+        int address = SP.getValue();
+        int value = registers.get(instruction.getRsrc()).getValue();
+
+        ram.writeByte(address, (byte) value);
+        ram.writeByte(address + 1, (byte) (value >> 8));
+        ram.writeByte(address + 2, (byte) (value >> 16));
+        ram.writeByte(address + 3, (byte) (value >> 24));
+
+        PC.setValue(PC.getValue() + instruction.getImmediate());
+    }
+
+    /**
+     * Execute instruction CALLR
+     * Save next instruction address on stack, and relative jump to src register
+     *
+     * @param instruction Instruction to be executed
+     */
+    private void executeCALLR(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.CALLR : "Wrong instruction";
+
+        SP.decrement();
+        int address = SP.getValue();
+        int value = registers.get(instruction.getRsrc()).getValue();
+
+        ram.writeByte(address, (byte) value);
+        ram.writeByte(address + 1, (byte) (value >> 8));
+        ram.writeByte(address + 2, (byte) (value >> 16));
+        ram.writeByte(address + 3, (byte) (value >> 24));
+
+        int imm = registers.get(instruction.getRsrc()).getValue();
+        PC.setValue(PC.getValue() + imm);
+    }
+
+    /**
+     * Execute instruction RET
+     * Pop address from stack and relative jump to it
+     *
+     * @param instruction Instruction to be executed
+     */
+    private void executeRET(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.RET : "Wrong instruction";
+
         SP.increment();
         int value;
         int address = SP.getValue();
@@ -629,99 +717,86 @@ public class CPU {
         value |= (int) ram.getByte(address + 2) << 16;
         value |= (int) ram.getByte(address + 3) << 24;
 
-        registers.get(instruction.getRdst()).setValue(value);
-    }
-
-    /**
-     * Execute instruction JMP
-     *
-     * @param instruction Instruction to be executed
-     */
-    private void executeJMP(Instruction instruction) {
-        assert instruction.getOpcode() == Instruction.JMP : "Wrong instruction";
-
-        PC.setValue();
-    }
-
-    /**
-     * Execute instruction JMPR
-     *
-     * @param instruction Instruction to be executed
-     */
-    private void executeJMPR(Instruction instruction) {
-
-    }
-
-    /**
-     * Execute instruction CALL
-     *
-     * @param instruction Instruction to be executed
-     */
-    private void executeCALL(Instruction instruction) {
-
-    }
-
-    /**
-     * Execute instruction CALLR
-     *
-     * @param instruction Instruction to be executed
-     */
-    private void executeCALLR(Instruction instruction) {
-
-    }
-
-    /**
-     * Execute instruction RET
-     *
-     * @param instruction Instruction to be executed
-     */
-    private void executeRET(Instruction instruction) {
-
+        PC.setValue(PC.getValue() + value);
     }
 
     /**
      * Execute instruction CRL
+     * Control register load. Copy src register to special register at address read from immediate
      *
      * @param instruction Instruction to be executed
      */
     private void executeCRL(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.CRL : "Wrong instruction";
 
+        int address = registers.get(instruction.getRsrc()).getValue();
+        int value = instruction.getImmediate();
+        CR.getRegister(address).setValue(value);
     }
 
     /**
      * Execute instruction CRS
+     * Control register store. Copy special register at address from immediate value to dst register.
      *
      * @param instruction Instruction to be executed
      */
     private void executeCRS(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.CRS : "Wrong instruction";
 
+        int address = registers.get(instruction.getRsrc()).getValue();
+        int value = CR.getRegister(address).getValue();
+        registers.get(instruction.getRdst()).setValue(value);
     }
 
     /**
      * Execute instruction OUTB
+     * Send byte from src register to port given by immediate
      *
      * @param instruction Instruction to be executed
      */
     private void executeOUTB(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.OUTB : "Wrong instruction";
 
+        int address = instruction.getImmediate();
+        byte value = (byte) registers.get(instruction.getRsrc()).getValue();
+        io_controller.writePort(address, value);
     }
 
     /**
      * Execute instruction INB
+     * Send byte from port given by immediate to special register
      *
      * @param instruction Instruction to be executed
      */
     private void executeINB(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.INB : "Wrong instruction";
 
+        int address = instruction.getImmediate();
+        byte value = io_controller.readPort(address);
+        registers.get(instruction.getRdst()).setValue(value);
     }
 
     /**
      * Execute instruction IRET
+     * Pop all registers back
      *
      * @param instruction Instruction to be executed
      */
     private void executeIRET(Instruction instruction) {
+        Set<Byte> keys = registers.keySet();
 
+        keys.sort();
+
+        assert instruction.getOpcode() == Instruction.IRET : "Wrong instruction";
+        for (byte register_id : registers.keySet()) {
+            int value;
+            value  = (int) ram.getByte(SP.getValue());       SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 8;  SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 16; SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 24; SP.increment();
+
+            registers.get(register_id).setValue(value);
+        }
     }
 
     /**
@@ -730,7 +805,9 @@ public class CPU {
      * @param instruction Instruction to be executed
      */
     private void executeOFF(Instruction instruction) {
+        assert instruction.getOpcode() == Instruction.IRET : "Wrong instruction";
 
+        assert false : "Got instruction OFF";
     }
 
 }
