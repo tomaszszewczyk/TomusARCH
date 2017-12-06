@@ -2,33 +2,135 @@ package pl.tomaszszewczyk.machine;
 
 import pl.tomaszszewczyk.machine.Registers.*;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
+/**
+ * CPU (Central Processing Unit) emulator class
+ *
+ * @author Tomasz Szewczyk
+ */
 public class CPU {
+    /**
+     * Register R0
+     */
     private GeneralPurposeRegister R0 = new GeneralPurposeRegister();
+    /**
+     * Register R1
+     */
     private GeneralPurposeRegister R1 = new GeneralPurposeRegister();
+    /**
+     * Register R2
+     */
     private GeneralPurposeRegister R2 = new GeneralPurposeRegister();
+    /**
+     * Register R3
+     */
     private GeneralPurposeRegister R3 = new GeneralPurposeRegister();
+    /**
+     * Register R4
+     */
     private GeneralPurposeRegister R4 = new GeneralPurposeRegister();
+    /**
+     * Register R5
+     */
     private GeneralPurposeRegister R5 = new GeneralPurposeRegister();
+    /**
+     * Register R6
+     */
     private GeneralPurposeRegister R6 = new GeneralPurposeRegister();
+    /**
+     * Register R7
+     */
     private GeneralPurposeRegister R7 = new GeneralPurposeRegister();
+    /**
+     * Register R8
+     */
     private GeneralPurposeRegister R8 = new GeneralPurposeRegister();
+    /**
+     * Register R9
+     */
     private GeneralPurposeRegister R9 = new GeneralPurposeRegister();
+    /**
+     * Register R10
+     */
     private GeneralPurposeRegister R10 = new GeneralPurposeRegister();
+    /**
+     * Register R11
+     */
     private GeneralPurposeRegister R11 = new GeneralPurposeRegister();
+    /**
+     * Register R12
+     */
     private GeneralPurposeRegister R12 = new GeneralPurposeRegister();
+    /**
+     * Register R13
+     */
     private GeneralPurposeRegister R13 = new GeneralPurposeRegister();
+    /**
+     * Register R14
+     */
     private GeneralPurposeRegister R14 = new GeneralPurposeRegister();
+    /**
+     * Register R15
+     */
     private GeneralPurposeRegister R15 = new GeneralPurposeRegister();
+    /**
+     * Register PC, program counter
+     */
     private ProgramCounterRegister PC = new ProgramCounterRegister();
+    /**
+     * Register SP, stack pointer
+     */
     private StackPointerRegister SP = new StackPointerRegister();
+    /**
+     * Register FR, flag register
+     */
     private FlagRegister FR = new FlagRegister();
+    /**
+     * Registers CR, control registers
+     */
     private ControlRegisters CR = new ControlRegisters();
 
-    public static class RegisterAddresses {
+    /**
+     * Registers map
+     */
+    private Map<Byte, Register> registers = new HashMap<>();
+
+    /**
+     * Read only memory (program memory)
+     */
+    private ReadOnlyMemory rom;
+
+    /**
+     * Random access memory
+     */
+    private RandomAccessMemory ram;
+
+    /**
+     * Interrupt controller
+     */
+    private InterruptController int_controller;
+
+    /**
+     * IO controller
+     */
+    private IOController io_controller;
+
+    /**
+     * Interrupt service routine address registers addresses
+     */
+    private static abstract class ISRRegisterAddr {
+        public static final int MemoryRangeExceededIntRegisterAddr = 0x100;
+        public static final int DivideByZeroIntRegisterAddr = 0x101;
+        public static final int GeneralErrorIntRegisterAddr = 0x102;
+        public static final int TimerInterruptIntRegisterAddr = 0x103;
+        public static final int ConsoleInterruptIntRegisterAddr = 0x104;
+    }
+
+    /**
+     * Register addresses
+     */
+    public static abstract class RegisterAddresses {
         public static final byte R0 = 0x00;
         public static final byte R1 = 0x01;
         public static final byte R2 = 0x02;
@@ -50,13 +152,15 @@ public class CPU {
         public static final byte FR = 0x18;
     }
 
-    private Map<Byte, Register> registers = new HashMap<>();
-
-    private ReadOnlyMemory rom;
-    private RandomAccessMemory ram;
-    private InterruptController int_controller;
-    private IOController io_controller;
-
+    /**
+     * CPU constructor. Initialize register values and registers RAM, ROM,
+     * INT controller and IO controller
+     *
+     * @param newRom           ROM from which CPU will read program
+     * @param newRam           RAM on which CPU will be operating
+     * @param newIntController Interrupt controller from which CPU will be reading interrupts
+     * @param newIOController  IO controller on which CPU will be operating
+     */
     public CPU(ReadOnlyMemory newRom,
                RandomAccessMemory newRam,
                InterruptController newIntController,
@@ -87,19 +191,72 @@ public class CPU {
         registers.put(RegisterAddresses.FR, FR);
     }
 
+    /**
+     * Trigger next processor cycle
+     * Check for interrupt, read instruction from rom and execute
+     */
     public void triggerTick() {
         if (int_controller.isAny()) {
-            for (byte register_id : registers.keySet()) {
+            List<Byte> key_list = new LinkedList<>();
+            key_list.addAll(registers.keySet());
+            Collections.sort(key_list);
+            Collections.reverse(key_list);
 
+            for (byte register_id : registers.keySet()) {
+                int value = registers.get(register_id).getValue();
+
+                SP.decrement();
+                ram.writeByte(SP.getValue(), (byte) value);
+                SP.decrement();
+                ram.writeByte(SP.getValue(), (byte) (value >> 8));
+                SP.decrement();
+                ram.writeByte(SP.getValue(), (byte) (value >> 16));
+                SP.decrement();
+                ram.writeByte(SP.getValue(), (byte) (value >> 24));
+            }
+            Interrupt interrupt = int_controller.getInt();
+
+            switch (interrupt) {
+                case MemoryRangeExceeded: {
+                    PC.setValue(CR.getRegister(
+                            ISRRegisterAddr.MemoryRangeExceededIntRegisterAddr).getValue());
+                    break;
+                }
+                case DivideByZero: {
+                    PC.setValue(CR.getRegister(
+                            ISRRegisterAddr.DivideByZeroIntRegisterAddr).getValue());
+                    break;
+                }
+                case GeneralError: {
+                    PC.setValue(CR.getRegister(
+                            ISRRegisterAddr.GeneralErrorIntRegisterAddr).getValue());
+                    break;
+                }
+                case TimerInterrupt: {
+                    PC.setValue(CR.getRegister(
+                            ISRRegisterAddr.TimerInterruptIntRegisterAddr).getValue());
+                    break;
+                }
+                case ConsoleInterrupt: {
+                    PC.setValue(CR.getRegister(
+                            ISRRegisterAddr.ConsoleInterruptIntRegisterAddr).getValue());
+                    break;
+                }
             }
 
-        } else {
-            Instruction instruction = rom.getInstruction(PC.getValue());
-            PC.increment();
-            execute(instruction);
         }
+
+        Instruction instruction = rom.getInstruction(PC.getValue());
+        PC.increment();
+        execute(instruction);
     }
 
+
+    /**
+     * Execute instruction
+     *
+     * @param instruction Instruction to be executed
+     */
     private void execute(Instruction instruction) {
         switch (instruction.getOpcode()) {
 
@@ -607,10 +764,14 @@ public class CPU {
 
         int value = registers.get(instruction.getRsrc()).getValue();
 
-        SP.decrement(); ram.writeByte(SP.getValue(), (byte) value);
-        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 8));
-        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 16));
-        SP.decrement(); ram.writeByte(SP.getValue(), (byte) (value >> 24));
+        SP.decrement();
+        ram.writeByte(SP.getValue(), (byte) value);
+        SP.decrement();
+        ram.writeByte(SP.getValue(), (byte) (value >> 8));
+        SP.decrement();
+        ram.writeByte(SP.getValue(), (byte) (value >> 16));
+        SP.decrement();
+        ram.writeByte(SP.getValue(), (byte) (value >> 24));
     }
 
     /**
@@ -624,10 +785,14 @@ public class CPU {
         assert instruction.getOpcode() == Instruction.POP : "Wrong instruction";
 
         int value;
-        value  = (int) ram.getByte(SP.getValue());       SP.increment();
-        value |= (int) ram.getByte(SP.getValue()) << 8;  SP.increment();
-        value |= (int) ram.getByte(SP.getValue()) << 16; SP.increment();
-        value |= (int) ram.getByte(SP.getValue()) << 24; SP.increment();
+        value = (int) ram.getByte(SP.getValue());
+        SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 8;
+        SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 16;
+        SP.increment();
+        value |= (int) ram.getByte(SP.getValue()) << 24;
+        SP.increment();
 
         registers.get(instruction.getRdst()).setValue(value);
     }
@@ -783,17 +948,23 @@ public class CPU {
      * @param instruction Instruction to be executed
      */
     private void executeIRET(Instruction instruction) {
-        Set<Byte> keys = registers.keySet();
+        assert instruction.getOpcode() == Instruction.IRET : "Wrong instruction";
 
-        keys.sort();
+        List<Byte> key_list = new LinkedList<>();
+        key_list.addAll(registers.keySet());
+        Collections.sort(key_list);
 
         assert instruction.getOpcode() == Instruction.IRET : "Wrong instruction";
-        for (byte register_id : registers.keySet()) {
+        for (byte register_id : key_list) {
             int value;
-            value  = (int) ram.getByte(SP.getValue());       SP.increment();
-            value |= (int) ram.getByte(SP.getValue()) << 8;  SP.increment();
-            value |= (int) ram.getByte(SP.getValue()) << 16; SP.increment();
-            value |= (int) ram.getByte(SP.getValue()) << 24; SP.increment();
+            value = (int) ram.getByte(SP.getValue());
+            SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 8;
+            SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 16;
+            SP.increment();
+            value |= (int) ram.getByte(SP.getValue()) << 24;
+            SP.increment();
 
             registers.get(register_id).setValue(value);
         }
@@ -809,5 +980,4 @@ public class CPU {
 
         assert false : "Got instruction OFF";
     }
-
 }

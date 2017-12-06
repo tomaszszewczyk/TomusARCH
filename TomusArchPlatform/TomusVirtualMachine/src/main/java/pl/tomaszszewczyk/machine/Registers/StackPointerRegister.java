@@ -8,7 +8,7 @@ package pl.tomaszszewczyk.machine.Registers;
 public class StackPointerRegister extends Register {
 
     /**
-     * Incremet register value
+     * Increment register value
      */
     public void increment() {
         value ++;
