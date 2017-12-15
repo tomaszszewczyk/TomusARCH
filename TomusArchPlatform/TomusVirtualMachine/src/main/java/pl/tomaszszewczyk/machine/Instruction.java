@@ -1,5 +1,7 @@
 package pl.tomaszszewczyk.machine;
 
+import java.io.Serializable;
+
 public class Instruction {
     private byte opcode;
     private byte rdst;

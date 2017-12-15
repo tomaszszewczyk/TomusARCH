@@ -1,5 +1,7 @@
 package pl.tomaszszewczyk.machine.Registers;
 
+import java.io.Serializable;
+
 /**
  * Most basic representation of register
  *

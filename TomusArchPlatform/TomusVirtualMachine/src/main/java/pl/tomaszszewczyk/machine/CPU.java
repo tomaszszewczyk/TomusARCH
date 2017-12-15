@@ -2,6 +2,7 @@ package pl.tomaszszewczyk.machine;
 
 import pl.tomaszszewczyk.machine.Registers.*;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -218,28 +219,23 @@ public class CPU {
 
             switch (interrupt) {
                 case MemoryRangeExceeded: {
-                    PC.setValue(CR.getRegister(
-                            ISRRegisterAddr.MemoryRangeExceededIntRegisterAddr).getValue());
+                    PC.setValue(CR.readRegisterByAddress(ISRRegisterAddr.MemoryRangeExceededIntRegisterAddr));
                     break;
                 }
                 case DivideByZero: {
-                    PC.setValue(CR.getRegister(
-                            ISRRegisterAddr.DivideByZeroIntRegisterAddr).getValue());
+                    PC.setValue(CR.readRegisterByAddress(ISRRegisterAddr.DivideByZeroIntRegisterAddr));
                     break;
                 }
                 case GeneralError: {
-                    PC.setValue(CR.getRegister(
-                            ISRRegisterAddr.GeneralErrorIntRegisterAddr).getValue());
+                    PC.setValue(CR.readRegisterByAddress(ISRRegisterAddr.GeneralErrorIntRegisterAddr));
                     break;
                 }
                 case TimerInterrupt: {
-                    PC.setValue(CR.getRegister(
-                            ISRRegisterAddr.TimerInterruptIntRegisterAddr).getValue());
+                    PC.setValue(CR.readRegisterByAddress(ISRRegisterAddr.TimerInterruptIntRegisterAddr));
                     break;
                 }
                 case ConsoleInterrupt: {
-                    PC.setValue(CR.getRegister(
-                            ISRRegisterAddr.ConsoleInterruptIntRegisterAddr).getValue());
+                    PC.setValue(CR.readRegisterByAddress(ISRRegisterAddr.ConsoleInterruptIntRegisterAddr));
                     break;
                 }
             }

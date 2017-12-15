@@ -1,5 +1,7 @@
 package pl.tomaszszewczyk.machine;
 
+import java.io.Serializable;
+
 public class IOController {
     void writePort(int address, byte value) {
 

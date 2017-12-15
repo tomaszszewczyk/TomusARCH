@@ -62,6 +62,12 @@ public class ControlRegisters {
         registers[address].setValue(value);
     }
 
+    /**
+     * Get register at address
+     *
+     * @param address address of desired register
+     * @return read register
+     */
     public GeneralPurposeRegister getRegister(int address) {
         assert isInRange(address) : "Tried to access not existing register";
         return registers[address - addressOffset];
